@@ -1,17 +1,76 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title> Billing Summary </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card color="primary" class="!rounded-lg">
+    <ion-card-header>
+      <ion-card-subtitle class="text-lg tracking-widest normal-case">Hello ERNIE!</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+
+  <hr>
+
+  <div class="w-full px-4 mb-2 mt-4 flex text-center items-cente justify-center">
+    <ion-text class="font-bold text-sm text-black-100 tracking-wide">TRANSACTION HISTORY</ion-text>
+  </div>
+
+  <div class="px-4 overflow-hidden">
+    <ngx-datatable
+      class="material rounded-lg"
+      [ngClass]="{'header-fixed': loanRows.length > 8}"
+      [rows]="loanRows"
+      [rowHeight]="50"
+      [headerHeight]="50"
+      [columnMode]="'standard'"
+      [scrollbarH]="true"
+      [scrollbarV]="true"
+    >
+      <ngx-datatable-column name="Due Date">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{value | date: 'MM/dd/yyyy'}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Payment Date">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{value | date: 'MM/dd/yyyy'}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Installment">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{value | currency: 'PHP'}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Payment">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{value | currency: 'PHP'}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Interest">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{value | currency: 'PHP'}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Penalty">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          <p class="text-[#ed2023]">{{value | currency: 'PHP'}}</p>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Total">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{value | currency: 'PHP'}}
+        </ng-template>
+      </ngx-datatable-column>
+    </ngx-datatable>
+  </div>
+
+<div class="flex w-full items-center justify-center my-5">
+  <ion-thumbnail class="w-[150px]">
+    <img src="../../assets/super-bikes-center-logo.jpg" />
+  </ion-thumbnail>
+</div>
+
 </ion-content>
