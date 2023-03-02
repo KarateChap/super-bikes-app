@@ -5,7 +5,6 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
   <div
     class="w-full h-[7vh] bg-[#292673] flex justify-center items-center relative"
   >
@@ -29,72 +28,72 @@
     <ion-item>
       <ion-label>
         <p class="!text-[12px]">Release Date</p>
-        <h1 class="!text-[15px]">{{loanInfo.releaseDate | date}}</h1>
+        <h1 class="!text-[15px] !font-bold">{{loanInfo.releaseDate | date}}</h1>
       </ion-label>
     </ion-item>
     <ion-item>
       <ion-label>
         <p class="!text-[12px]">Loan Scheme</p>
-        <p class="!text-[14px] !text-black">{{loanInfo.loanScheme}}</p>
+        <h1 class="!text-[12px] !text-black !font-bold">{{loanInfo.loanScheme}}</h1>
       </ion-label>
     </ion-item>
     <ion-item>
       <ion-label>
         <p class="!text-[12px]">Colour</p>
-        <h1 class="!text-[15px]">{{loanInfo.colour}}</h1>
+        <h1 class="!text-[15px] !font-bold">{{loanInfo.colour}}</h1>
       </ion-label>
     </ion-item>
     <ion-item>
       <ion-label>
         <p class="!text-[12px]">Customer</p>
-        <h1 class="!text-[15px]">{{loanInfo.customer}}</h1>
+        <h1 class="!text-[15px] !font-bold">{{loanInfo.customer}}</h1>
       </ion-label>
     </ion-item>
     <ion-item>
       <ion-label>
         <p class="!text-[12px]">Frame</p>
-        <h1 class="!text-[15px]">{{loanInfo.frame}}</h1>
+        <h1 class="!text-[15px] !font-bold">{{loanInfo.frame}}</h1>
       </ion-label>
     </ion-item>
     <ion-item>
       <ion-label>
         <p class="!text-[12px]">Engine No</p>
-        <h1 class="!text-[15px]">{{loanInfo.engineNo}}</h1>
+        <h1 class="!text-[15px] !font-bold">{{loanInfo.engineNo}}</h1>
       </ion-label>
     </ion-item>
   </div>
 
   <ion-card class="!rounded-[0]">
     <ion-card-header class="text-center" color="primary">
-      <ion-card-title class="text-xl tracking-wider"
+      <ion-card-subtitle>Loan Amount</ion-card-subtitle>
+      <ion-card-title class="text-xl tracking-wider font-bold"
         >{{loanInfo.loanAmount | currency:'PHP'}}</ion-card-title
       >
-      <ion-card-subtitle>Loan Amount</ion-card-subtitle>
     </ion-card-header>
-    <hr>
+    <hr />
     <ion-card-content>
       <ion-list>
         <ion-item lines="none">
           <ion-label slot="start">
             <p class="!text-[14px]">Terms</p>
-            <h1 class="!text-[16px]">{{loanInfo.terms}}</h1>
+            <h1 class="!text-[16px] !font-bold">{{loanInfo.terms}}</h1>
           </ion-label>
           <ion-label slot="end" class="text-right">
             <p class="!text-[12px]">Interest Rate</p>
-            <h1 class="!text-[15px]">{{loanInfo.interestRate}}%</h1>
+            <h1 class="!text-[15px] !font-bold">{{loanInfo.interestRate}}%</h1>
           </ion-label>
         </ion-item>
 
         <ion-item lines="none">
           <ion-label slot="start">
             <p class="!text-[14px]">Installment</p>
-            <h1 class="!text-[16px]">
+            <h1 class="!text-[16px] !font-bold">
               {{loanInfo.installment | currency: 'PHP'}}
             </h1>
           </ion-label>
           <ion-label slot="end" class="text-right"
             ><p class="!text-[14px]">Penalty</p>
-            <h1 class="!text-[16px]">
+            <h1 class="!text-[16px] !font-bold">
               {{loanInfo.penalty | currency: 'PHP'}}
             </h1></ion-label
           >
@@ -103,13 +102,13 @@
         <ion-item lines="none">
           <ion-label slot="start"
             ><p class="!text-[14px]">Rebate</p>
-            <h1 class="!text-[16px]">
+            <h1 class="!text-[16px] !font-bold">
               {{loanInfo.rebate | currency: 'PHP'}}
             </h1></ion-label
           >
           <ion-label slot="end" class="text-right"
             ><p class="!text-[14px]">Amount To Pay</p>
-            <h1 class="!text-[16px]">
+            <h1 class="!text-[16px] !font-bold">
               {{loanInfo.amountToPay | currency: 'PHP'}}
             </h1></ion-label
           >
@@ -123,5 +122,4 @@
       <img src="../../assets/super-bikes-center-logo.jpg" />
     </ion-thumbnail>
   </div>
-
 </ion-content>

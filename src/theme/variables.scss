@@ -2,7 +2,19 @@
 // http://ionicframework.com/docs/theming/
 
 /** Ionic CSS Variables **/
+
+
+@font-face {
+  font-family: Inter;
+  src: url("../assets/Inter-Regular.ttf"); //change url accordingly
+  }
+
+  :root {
+
+  }
+
 :root {
+  --ion-font-family: Inter;
   /** primary **/
   --ion-background-color: rgb(255, 255, 255);
   --ion-color-primary: #292673;

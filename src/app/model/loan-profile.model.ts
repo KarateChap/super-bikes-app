@@ -1,5 +1,6 @@
 export interface LoanProfile {
   loanId: string;
+  email?: string;
   releaseDate: Date;
   customerName: string;
   loanScheme: string;
