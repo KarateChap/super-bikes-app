@@ -26,6 +26,8 @@
     "@capacitor/status-bar": "4.1.1",
     "@ionic/angular": "^6.1.9",
     "@swimlane/ngx-datatable": "^20.1.0",
+    "iconv": "^3.0.1",
+    "iconv-lite": "^0.6.3",
     "ionicons": "^6.0.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
